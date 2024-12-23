@@ -266,3 +266,65 @@ body, p, span, li, a {
     background-position: right; /* Change background position on hover */
 }
 
+/* Feature Section Styling */
+.feature-section {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.feature-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+.feature-item {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+    flex-direction: row; /* Align items in a row */
+    flex: 1;    
+    min-width: 250px;
+    margin: 20px;
+    padding: 30px;
+
+    border-radius: 10px;
+   
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #472d85; /* Darker shade of purple */
+    background-color: #ede6ff; /* Lighter shade of purple */
+    border-radius: 50%;
+    padding: 20px;
+    margin-right: 20px; /* Add space between icon and text */
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column; /* Stack heading and paragraph vertically */
+    text-align: left; /* Align text to the left */
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: -1px;
+    color: #333;
+    font-family: 'League Spartan', sans-serif; /* Use League Spartan for headings */
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+    font-family: 'Raleway', sans-serif; /* Use Raleway for paragraphs */
+}
