@@ -81,14 +81,14 @@ body, p, span, li, a {
 
 /* Optional: Add hover effect (if you want the color to change on hover) */
 #menu-links a:hover {
-    color: #333;  /* You can change this to any color you prefer on hover */
+    color: #ffde5f;  /* You can change this to any color you prefer on hover */
     text-decoration: none;  /* Ensure no underline appears on hover */
 }
 
 /* Styling for the logo */
 .logo img {
     max-width: 100px; /* Adjust the logo size */
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
 }
 
 /* Optional: Adjusting opacity when navbar is transparent for the logo */
@@ -101,12 +101,32 @@ body, p, span, li, a {
     color: white; /* Set the menu icon color to white */
     font-size: 24px; /* Adjust the size of the menu icon */
     cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.8s ease;  
+}
+
+/* Hover effect for the menu icon */
+.menu-icon:hover {
+    color: #ffde5f; /* Change color on hover */
 }
 
 /* Ensure no conflicting styles with pseudo-elements */
 .menu-icon::before,
 .menu-icon::after {
     content: none; /* Remove any pseudo-elements */
+}
+
+/* Styling for the search icon */
+.search-icon {
+    color: white; /* Set the search icon color to white */
+    font-size: 24px; /* Adjust the size of the search icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-left: 20px; /* Add some space between the menu icon and the search icon */
+    transition: color 0.8s ease;  
+}
+
+/* Optional: Add hover effect for the search icon */
+.search-icon:hover {
+    color: #ffde5f; /* Change color on hover */
 }
 
 /* Video Section Styling */
