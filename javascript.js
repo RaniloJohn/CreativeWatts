@@ -26,3 +26,44 @@ window.addEventListener("scroll", () => {
     // Update the last scroll position
     lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
 });
+
+
+// Image slider //
+// ...existing code...
+document.addEventListener('DOMContentLoaded', function() {
+    const sliderContainer = document.querySelector('.slider-container');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        sliderContainer.style.transform = `translateX(-${index * 100}%)`;
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        indicators[index].classList.add('active');
+    }
+
+    function showNextSlide() {
+        currentIndex = (currentIndex + 1) % sliderItems.length;
+        showSlide(currentIndex);
+    }
+
+    function showPrevSlide() {
+        currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
+        showSlide(currentIndex);
+    }
+
+    nextButton.addEventListener('click', showNextSlide);
+    prevButton.addEventListener('click', showPrevSlide);
+
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', function() {
+            currentIndex = parseInt(this.getAttribute('data-slide'));
+            showSlide(currentIndex);
+        });
+    });
+
+    setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+});
+// ...existing code...
